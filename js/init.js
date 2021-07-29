@@ -1,5 +1,13 @@
-fetch("https://api.thedogapi.com/v1/breeds")
-  .then((response) => console.log(response))
-  .then((data) => console.log(data));
-
-console.log("this is code");
+(function () {
+  const grid = new Grid(document.getElementById("container"));
+  fetch("https://api.thedogapi.com/v1/breeds")
+    .then((response) => response.json())
+    .then((breeds) => {
+      const top15 = breeds.slice(0, 16);
+      console.log("top15:", top15);
+      grid.populate(top15);
+    });
+  // .catch((error) => {
+  //   alert("error occurred " + error.message);
+  // });
+})();
