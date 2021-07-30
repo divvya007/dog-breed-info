@@ -6,18 +6,21 @@ function BreedItem(containerEl, breedData) {
 
   this.image = document.createElement("img");
   this.image.src = breedData.image.url;
-  this.image.height = 50;
+  this.image.height = 200;
   this.outerDiv.append(this.image);
 
   this.title = document.createElement("div");
+  this.title.className = "breed-item-style";
   this.title.innerText = breedData.name;
   this.outerDiv.append(this.title);
 
   this.subtitle = document.createElement("div");
+  this.subtitle.className = "breed-item-style";
   this.subtitle.innerText = breedData.temperament;
   this.outerDiv.append(this.subtitle);
 
   this.subtitle2 = document.createElement("div");
+  this.subtitle2.className = "breed-item-style";
   this.subtitle2.innerText = breedData.life_span;
   this.outerDiv.append(this.subtitle2);
 
