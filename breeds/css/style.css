@@ -1,11 +1,11 @@
 body {
-  margin: 0%;
-  padding: 0%;
+  background-color: rgb(63, 43, 43);
 }
 #single-breed {
-  display: inline;
+  color: aliceblue;
+  /* display: inline; */
   max-width: 100%;
-  height: 100%;
+  /* height: 100%; */
   padding: 5%;
 }
 /* .text-container {
@@ -17,17 +17,19 @@ body {
 
 .main-container {
   display: flex;
-  flex: 1, auto;
+  flex: 1;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  /* align-items: flex-start; */
+  justify-content: flex-start;
+  /* flex-basis: auto; */
 }
 .flex-container {
-  /* flex: 1; */
+  /* flex: 1 auto; */
   width: fit-content;
 }
 
-/* #image {
-  height: 455px;
-  width: 571px;
-} */
+.image-container {
+  max-width: 100%;
+  padding: 5%;
+}
