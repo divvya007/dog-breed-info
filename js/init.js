@@ -3,7 +3,7 @@
   fetch("https://api.thedogapi.com/v1/breeds")
     .then((response) => response.json())
     .then((breeds) => {
-      const top15 = breeds.slice(0, 16);
+      const top15 = breeds.slice(0, 15);
       console.log("top15:", top15);
       grid.populate(top15);
     });

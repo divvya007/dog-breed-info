@@ -3,6 +3,8 @@
 
 function BreedItem(containerEl, breedData) {
   this.outerDiv = document.createElement("div");
+  //   this.outerDiv.setAttribute("id", "click-div");
+  this.outerDiv.className = "outer-div";
 
   this.image = document.createElement("img");
   this.image.src = breedData.image.url;
@@ -25,4 +27,7 @@ function BreedItem(containerEl, breedData) {
   this.outerDiv.append(this.subtitle2);
 
   containerEl.append(this.outerDiv);
+  this.outerDiv.addEventListener("click", () => {
+    return (window.location = "/breeds/index.html?breed=" + breedData.name);
+  });
 }

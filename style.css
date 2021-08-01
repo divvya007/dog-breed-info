@@ -33,3 +33,10 @@ h1 {
 .breed-item-style {
   color: whitesmoke;
 }
+
+.outer-div {
+  max-width: 100%;
+  height: 100%;
+  /* height: 100%; */
+  /* box-sizing: border-box; */
+}
