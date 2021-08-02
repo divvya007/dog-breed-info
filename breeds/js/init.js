@@ -1,7 +1,10 @@
 let hideStaticPage = document.getElementById("static-page");
 hideStaticPage.style.display = "none";
 
-const imageToOtherPage = new Spinner(document.getElementById("showSpinner"));
+const imageToOtherPage = new Spinner(
+  document.getElementById("showSpinner"),
+  "./../images/loading.gif"
+);
 imageToOtherPage.show();
 
 (function () {

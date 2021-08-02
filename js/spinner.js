@@ -1,6 +1,6 @@
-function Spinner(containerEl) {
+function Spinner(containerEl, path) {
   this.image = document.createElement("img");
-  this.image.src = "./../images/loading.gif";
+  this.image.src = path;
   this.image.className = "loading-image";
   this.imgInsideContainer = containerEl;
   this.imgInsideContainer.className = "spinner";

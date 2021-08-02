@@ -1,6 +1,9 @@
 (function () {
   const grid = new Grid(document.getElementById("container"));
-  const imageToggle = new Spinner(document.getElementById("image-manipulator"));
+  const imageToggle = new Spinner(
+    document.getElementById("image-manipulator"),
+    "./images/loading.gif"
+  );
   imageToggle.show();
 
   fetch("https://api.thedogapi.com/v1/breeds")
