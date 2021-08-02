@@ -40,3 +40,12 @@ h1 {
   /* height: 100%; */
   /* box-sizing: border-box; */
 }
+
+#loading-image {
+  justify-content: center;
+}
+
+.image-loader {
+  display: flex;
+  justify-content: center;
+}
