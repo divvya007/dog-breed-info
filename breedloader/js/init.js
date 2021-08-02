@@ -1,4 +1,4 @@
-function Loader(imageDiv) {
-  this.divContainer = imageDiv;
-  this.divContainer.remove();
-}
+// function Loader(imageDiv) {
+//   this.divContainer = imageDiv;
+//   this.divContainer.remove();
+// }
