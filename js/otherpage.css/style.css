@@ -1,0 +1,8 @@
+#loading-image {
+  justify-content: center;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+}

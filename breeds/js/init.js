@@ -1,3 +1,9 @@
+let hideStaticPage = document.getElementById("static-page");
+// hideStaticPage.remove();
+hideStaticPage.style.display = "none";
+const imageToOtherPage = new Spinner(document.getElementById("showSpinner"));
+imageToOtherPage.show();
+
 (function () {
   const urlSearchParams = new URLSearchParams(window.location.search);
   console.log(urlSearchParams);
@@ -6,6 +12,8 @@
   fetch("https://api.thedogapi.com/v1/breeds/search?q=" + params.breed)
     .then((response) => response.json())
     .then((breedName) => {
+      imageToOtherPage.hide();
+      hideStaticPage.style.display = "block";
       console.log(breedName);
       document.getElementById("name").innerText = breedName[0].name;
       document.getElementById("origin").innerText = breedName[0].origin;
