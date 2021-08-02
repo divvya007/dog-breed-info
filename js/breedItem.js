@@ -28,6 +28,6 @@ function BreedItem(containerEl, breedData) {
 
   containerEl.append(this.outerDiv);
   this.outerDiv.addEventListener("click", () => {
-    return (window.location = "/breeds/index.html?breed=" + breedData.name);
+    return (window.location = "./breeds/index.html?breed=" + breedData.name);
   });
 }
