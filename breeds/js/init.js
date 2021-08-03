@@ -23,13 +23,37 @@ imageToOtherPage.show();
       // dog audio
       let dogAudioContainer = document.getElementById("dogAudioDiv");
       let soundEffect = document.createElement("AUDIO");
-      soundEffect.setAttribute("controls", "");
       soundEffect.id = "play-sound";
 
       let sourceTag = document.createElement("source");
-      sourceTag.setAttribute("src", "./../dog-audio/dog3.mp3");
+      let arrayOfLink = [
+        "./../dog-audio/dog3.mp3",
+        "./../dog-audio/lubark.mp3",
+        "./../dog-audio/pup1.mp3",
+        "./../dog-audio/bark.mp3",
+        "./../dog-audio/dSHAKE.mp3",
+        "./../dog-audio/pup4.mp3",
+        "./../dog-audio/pupwhimper.mp3",
+      ];
+      function generateRandomLink() {
+        let min = 0;
+        let max = arrayOfLink.length - 1;
+        let i = Math.floor(Math.random() * (max - min) + min);
+        console.log(i);
+        console.log(arrayOfLink[i]);
+
+        return arrayOfLink[i];
+      }
+      generateRandomLink(0, 8);
+      console.log(sourceTag);
+
+      sourceTag.setAttribute("src", generateRandomLink());
+
+      // sourceTag.setAttribute("src", "generateRandomLink");
+
       sourceTag.setAttribute("type", "audio/mpeg");
       soundEffect.append(sourceTag);
+      console.log(sourceTag);
 
       dogAudioContainer.append(soundEffect);
       dogAudioContainer.style.display = "none";
