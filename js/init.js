@@ -10,9 +10,9 @@
     .then((response) => response.json())
     .then((breeds) => {
       imageToggle.hide();
-      const top15 = breeds.slice(0, 15);
-      console.log("top15:", top15);
-      grid.populate(top15);
+      // const top15 = breeds.slice(0, 15);
+      // console.log("top15:", top15);
+      grid.populate(breeds);
     });
   // .catch((error) => {
   //   alert("error occurred " + error.message);

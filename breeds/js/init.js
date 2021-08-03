@@ -20,6 +20,11 @@ imageToOtherPage.show();
       hideStaticPage.style.display = "block";
       console.log(breedName);
 
+      // dog audio
+      (audio) => {
+        let dogAudio = document.getElementById("dogAudio");
+      };
+
       document.getElementById("name").innerText = breedName[0].name;
       document.getElementById("origin").innerText = breedName[0].origin;
       document.getElementById("bred-for").innerText = breedName[0].bred_for;
