@@ -65,7 +65,14 @@ imageToOtherPage.show();
       } else {
         document.getElementById("origin").innerText = breedName[0].origin;
       }
-      document.getElementById("bred-for").innerText = breedName[0].bred_for;
+
+      if (breedName[0].bred_for === undefined) {
+        document.getElementById("hide-div").style.display = "none";
+      } else {
+        document.getElementById("bred-for").innerText = breedName[0].bred_for;
+      }
+
+      // document.getElementById("bred-for").innerText = breedName[0].bred_for;
       document.getElementById("temperament").innerText =
         breedName[0].temperament;
       document.getElementById("life-span").innerText = breedName[0].life_span;
