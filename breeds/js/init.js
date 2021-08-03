@@ -21,9 +21,19 @@ imageToOtherPage.show();
       console.log(breedName);
 
       // dog audio
-      (audio) => {
-        let dogAudio = document.getElementById("dogAudio");
-      };
+      let dogAudioContainer = document.getElementById("dogAudioDiv");
+      let soundEffect = document.createElement("AUDIO");
+      soundEffect.setAttribute("controls", "");
+      soundEffect.id = "play-sound";
+
+      let sourceTag = document.createElement("source");
+      sourceTag.setAttribute("src", "./../dog-audio/dog3.mp3");
+      sourceTag.setAttribute("type", "audio/mpeg");
+      soundEffect.append(sourceTag);
+
+      dogAudioContainer.append(soundEffect);
+      dogAudioContainer.style.display = "none";
+      console.log(soundEffect);
 
       document.getElementById("name").innerText = breedName[0].name;
       document.getElementById("origin").innerText = breedName[0].origin;
@@ -37,4 +47,11 @@ imageToOtherPage.show();
         breedName[0].reference_image_id +
         ".jpg";
     });
+  // onclick image
+  document.getElementById("image").addEventListener("click", function () {
+    document.getElementById("play-sound").play();
+  });
 })();
+// document.getElementById("image-click").addEventListener("click", function () {
+//   alert("hello dog");
+// });
