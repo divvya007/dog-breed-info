@@ -8,15 +8,22 @@
 }
 
 #image-click {
-  cursor: pointer;
 }
 
 #image {
   height: 480px;
   width: 590px;
   object-fit: scale-down;
+  cursor: pointer;
 }
 
 .styling-div {
   padding: 2%;
+}
+#text-for-click-me {
+  font-weight: 700;
+  font-style: italic;
+  color: beige;
+  align-items: center;
+  padding-left: 200px;
 }
