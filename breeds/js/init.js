@@ -60,7 +60,11 @@ imageToOtherPage.show();
       console.log(soundEffect);
 
       document.getElementById("name").innerText = breedName[0].name;
-      document.getElementById("origin").innerText = breedName[0].origin;
+      if (breedName[0].origin === undefined) {
+        document.getElementById("hide-div").style.display = "none";
+      } else {
+        document.getElementById("origin").innerText = breedName[0].origin;
+      }
       document.getElementById("bred-for").innerText = breedName[0].bred_for;
       document.getElementById("temperament").innerText =
         breedName[0].temperament;

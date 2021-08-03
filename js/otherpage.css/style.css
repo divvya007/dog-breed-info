@@ -13,6 +13,10 @@
 
 #image {
   height: 480px;
-  width: 480px;
+  width: 590px;
   object-fit: scale-down;
+}
+
+.styling-div {
+  padding: 2%;
 }
