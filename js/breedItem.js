@@ -8,7 +8,9 @@ function BreedItem(containerEl, breedData) {
 
   this.image = document.createElement("img");
   this.image.src = breedData.image.url;
-  this.image.height = 200;
+  this.image.height = 250;
+  this.image.width = 350;
+
   this.outerDiv.append(this.image);
 
   this.title = document.createElement("div");
