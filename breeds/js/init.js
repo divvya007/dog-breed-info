@@ -9,16 +9,13 @@ imageToOtherPage.show();
 
 (function () {
   const urlSearchParams = new URLSearchParams(window.location.search);
-  console.log(urlSearchParams);
   const params = Object.fromEntries(urlSearchParams.entries());
-  console.log(params);
 
   fetch("https://api.thedogapi.com/v1/breeds/search?q=" + params.breed)
     .then((response) => response.json())
     .then((breedName) => {
       imageToOtherPage.hide();
       hideStaticPage.style.display = "block";
-      console.log(breedName);
 
       // dog audio
       let dogAudioContainer = document.getElementById("dogAudioDiv");
@@ -39,21 +36,14 @@ imageToOtherPage.show();
         let min = 0;
         let max = arrayOfLink.length - 1;
         let i = Math.floor(Math.random() * (max - min) + min);
-        console.log(i);
-        console.log(arrayOfLink[i]);
-
         return arrayOfLink[i];
       }
       generateRandomLink(0, 8);
-      console.log(sourceTag);
 
       sourceTag.setAttribute("src", generateRandomLink());
 
-      // sourceTag.setAttribute("src", "generateRandomLink");
-
       sourceTag.setAttribute("type", "audio/mpeg");
       soundEffect.append(sourceTag);
-      console.log(sourceTag);
 
       dogAudioContainer.append(soundEffect);
       dogAudioContainer.style.display = "none";
@@ -87,6 +77,3 @@ imageToOtherPage.show();
     document.getElementById("play-sound").play();
   });
 })();
-// document.getElementById("image-click").addEventListener("click", function () {
-//   alert("hello dog");
-// });

@@ -3,7 +3,6 @@
 
 function BreedItem(containerEl, breedData) {
   this.outerDiv = document.createElement("div");
-  //   this.outerDiv.setAttribute("id", "click-div");
   this.outerDiv.className = "outer-div";
 
   this.image = document.createElement("img");
